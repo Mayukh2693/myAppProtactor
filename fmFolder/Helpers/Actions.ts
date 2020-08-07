@@ -3,7 +3,7 @@ import { ElementFinder, browser } from "protractor";
 
 export class Actions{
 
-    async findElement(loc: ElementFinder): Promise<ElementFinder> {
+    async FindElement(loc: ElementFinder): Promise<ElementFinder> {
         try {
             let retry = 3;
             let element = null;
@@ -29,7 +29,7 @@ export class Actions{
 
     async ClickElement(loc: ElementFinder){
         try{
-           let element = await this.findElement(loc);
+           let element = await this.FindElement(loc);
            element.click();
            console.log(loc.locator() + " is clicked");
         } catch (error){

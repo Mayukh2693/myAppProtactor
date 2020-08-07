@@ -10,9 +10,9 @@
     "webdriver_start": "webdriver-manager start",
     "pretest": "npm run tsc",
     "clean-build": "npm run clean && npm run build",
-    "test": "protractor typeScriptConvertedFiles/conf.js"
+    "test": "protractor typeScriptConvertedFiles/appFolder/conf.js"
   },
-  "author": "",
+  "author": "Mayukh",
   "license": "ISC",
   "dependencies": {
     "@types/jasmine": "^2.8.8",
