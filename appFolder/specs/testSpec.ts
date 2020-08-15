@@ -15,6 +15,6 @@ describe("Test myApp", () => {
         let attr = await Base.Actions.GetAttributeValue(page.testPage.canvasWebLBL,"class");
         console.log(attr);
         await browser.sleep(2000);
-        console.log("testApp opened browser and passed.");
+        console.log("testApp opened browser and passed...");
     });
 });
