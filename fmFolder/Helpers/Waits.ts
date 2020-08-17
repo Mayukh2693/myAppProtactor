@@ -16,7 +16,7 @@ export class Waits{
             await browser.wait(EC.visibilityOf(element),TimeOuts.small);
         } catch(error){
             console.log("WaitForElementToBeVisibile failed: " + error);
-            throw error;
+            throw new Error("waitForElementToBeVisible failed: " + error);
         }
     }
 
@@ -26,7 +26,7 @@ export class Waits{
             await browser.wait(EC.invisibilityOf(element),TimeOuts.small);
         } catch(error){
             console.log("WaitForElementToBeInvisble failed: " + error);
-            throw error;
+            throw new Error("waitForElementToBeInvisible failed: " + error);
         }
     }
     async WaitForElementToBeClickable(loc: ElementFinder){
@@ -35,7 +35,7 @@ export class Waits{
             await browser.wait(EC.elementToBeClickable(element),TimeOuts.small);
         } catch(error){
             console.log("WaitForElementToBeClickable failed: " + error);
-            throw error;
+            throw new Error("waitForElementToBeClickable failed: " + error);
         }
     }
 
@@ -45,7 +45,7 @@ export class Waits{
             await browser.wait(EC.textToBePresentInElement(element, textValue),TimeOuts.small);
         } catch(error){
             console.log("WaitForElementText failed: " + error);
-            throw error;
+            throw new Error("waitForElementText failed: " + error);
         }
     }
 

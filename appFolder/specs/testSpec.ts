@@ -3,7 +3,7 @@ import { Base } from "../../fmFolder/Base";
 import { page } from "../pages/page";
 
 describe("Test myApp", () => {
-    it("Test", async () => {
+    it("Test1", async () => {
         await browser.waitForAngularEnabled(false);
         await browser.manage().window().maximize();
         await browser.get("https://angular.io/");

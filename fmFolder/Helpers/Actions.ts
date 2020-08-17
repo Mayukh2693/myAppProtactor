@@ -23,7 +23,7 @@ export class Actions{
             } while ((retry > 0) && (element == null));
             return loc;
         } catch (error) {
-            throw error;
+            throw new Error("findELement failed: " + error);
         }
     }
 
@@ -34,7 +34,7 @@ export class Actions{
            console.log(loc.locator() + " is clicked");
         } catch (error){
             await console.log("ClickElement failed: " + error);
-            throw error;
+            throw new Error("clickElement failed: " + error);
         }
     }
 
@@ -45,7 +45,7 @@ export class Actions{
             await console.log(loc.locator() + "- entered value");
         } catch (error){
             console.log("SendKeys failed: " + error);
-            throw error;
+            throw new Error("sendKeys failed: " + error);
         }
     }
 
@@ -57,7 +57,7 @@ export class Actions{
             return attrVal;
         } catch (error){
             console.log("GetAttributeValue failed: " + error);
-            throw error;
+            throw new Error("getAttributeValue failed: " + error);
         }
     }
 
@@ -67,7 +67,7 @@ export class Actions{
             await browser.actions().mouseMove(element).perform();
         } catch (error){
             console.log("MouseHover failed: " + error);
-            throw error;
+            throw new Error("mouseHover failed: " + error);
         }
     }
 }

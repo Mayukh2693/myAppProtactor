@@ -5,13 +5,17 @@ let path = require('path');
 exports.config = {
     framework: 'jasmine', //Type of Framework used 
     directConnect:true,  
-    chromeDriver: path.resolve("./appFolder/drivers/chromedriver.exe"),
+    // chromeDriver: path.resolve("./appFolder/drivers/chromedriver.exe"),
     specs: ["./specs/testSpec.js"], //Name of the Specfile
+    seleniumAddress: 'http://localhost:4444/wd/hub',
     // browser capabilities below
     multiCapabilities: [
         {
             browserName:'chrome',
-            arg: ["--disable-gpu"]
+            chromeOptions: {
+                args: ["--no-sandbox","--disable-gpu"]
+            }
+            
         }
     ],
     // Protractor hooks
